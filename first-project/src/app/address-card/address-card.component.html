@@ -1,0 +1,24 @@
+<div>
+
+<h1>{{user.name}}</h1>
+<h3>{{user.title}}</h3>
+<h3>{{user.address}}</h3>
+<div>
+  <button click = "My Event">My Button</button>
+  <p *ngIf="user.phone.length">Phone</p>
+  <p *ngFor="let phoneNumber of user.phone">{{phoneNumber}}</p>
+</div>
+
+<div>Months:
+  <select>
+      <option *ngFor="let i of months">{{i}}</option>
+      
+  </select>
+</div>
+  
+</div>
+<div>
+  <span *ngIf="isavailable; then condition1 else condition2">Condition is valid.</span>
+  <ng-template #condition1>Condition is valid</ng-template>
+  <ng-template #condition2>Condition is invalid</ng-template>
+</div>
